@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./src/output.css" rel="stylesheet" />
+    <link href="./src/custom.css" rel="stylesheet" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+    <script src="./src/script.js" defer></script>
+    <script src="./src/pagination.js" defer></script>
+  </head>
+
+  <body>
+    <section
+      class="relative max-w-[440px] mx-auto h-screen bg-ilm-orange pt-6 text-white"
+    >
+      <nav
+        class="fixed right-[50%] mx-auto h-full w-full max-w-[440px] translate-x-[50%]"
+      >
+        <!-- Navigasi Atas -->
+        <div class="mx-auto w-[90%] flex items-center justify-between">
+          <!-- Icon Back Page -->
+          <div class="flex justify-between items-center w-[65%] min-w-[12rem] max-w-[15.5rem] xs:w-[63.65%]">
+            <a href="https://ilm.or.id">
+              <img
+                src="https://ilm.or.id/asset/icon/icons-arrow-left.svg"
+                alt="tombol kembali"
+              />
+            </a>
+            <!-- Title Page -->
+            <h1 class="ilm-cd-semibold text-base tracking-[0.5px] text-ilm-white">
+              Kerjakan Quiz
+            </h1>
+          </div>
+          <!-- Icon Help Page -->
+          <div class="flex justify-end items-center">
+            <button class="bg-white text-ilm-orange border px-3 py-1 text-sm rounded hover:bg-ilm-orange hover:text-white ease-in duration-100">
+              Selesai
+            </button>
+          </div>
+        </div>
+        <!-- Navigasi Bawah -->
+        <div class="mx-auto mt-4 flex w-[89%] items-center justify-between">
+          <button id="prev" class="text-2xl">
+            <!-- <i class='bx bxs-left-arrow' ></i> -->
+            <i class="bx bx-left-arrow"></i>
+          </button>
+          <div id="pagination" class="flex justify-center items-center">
+          </div>
+          <button id="next" class="text-2xl">
+            <i class="bx bxs-right-arrow"></i>
+            <!-- <i class='bx bx-right-arrow' ></i> -->
+          </button>
+        </div>
+      </nav>
+      <section
+        class="fixed mb-10 mt-[90px] h-screen max-w-[440px] rounded-t-3xl bg-ilm-black overflow-hidden"
+      >
+        <div
+          class="pt-4 flex justify-between items-center text-white max-w-[85%] mx-auto"
+        >
+          <div class="flex justify-between font-semibold items-center w-[75%] max-w-[17rem]">
+            <p>Waktu Pengerjaan</p>
+            <p class="rounded-md px-2">39 : 30</p>
+          </div>
+          <div
+            id="map-button"
+            class="bg-ilm-orange rounded-md p-1.5 cursor-pointer"
+          >
+            <img
+              class="w-[20px] h-[20px]"
+              src="https://ilm.or.id/asset/icon/Logo-ILM.svg"
+              alt=""
+            />
+          </div>
+          <div
+            id="map-soal"
+            class="absolute -right-[100vw] z-10 top-4 w-[90%] mx-auto rounded-xl px-4 py-4 shadow-md shadow-slate-500/10 bg-[#1c1917] transition-all ease-in-out duration-700"
+          >
+            <div
+              class="flex flex-col h-[282px] flex-wrap relative"
+              id="map-container"
+            ></div>
+          </div>
+        </div>
+
+        <!-- Pembungkus Soal Soal -->
+        <div
+          class="no-scrollbar flex flex-col pb-32 gap-4 h-[calc(100vh-100px)] mx-auto w-[85%] overflow-y-scroll text-white mt-4"
+          id="soal-container"
+        ></div>
+      </section>
+    </section>
+  </body>
+</html>
